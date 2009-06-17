@@ -17,7 +17,7 @@ on this one.
 
 Until then, feel free to send me patches to this address
 
-Mark Draheim <rickscafe.casablanca@gmx.net>
+UPDATE: James Ausmus <james.ausmus.code@gmail.com>
 
 Do test the script. Right now I only tested it with well-behaved oggs.
 I'd be interested to know what happens with oggs that report weird
@@ -29,3 +29,18 @@ bitrates or sampling frequencies or have broken tags.
 Have Fun
 
 - Mark
+
+
+UPDATE: As Mark no longer maintains this script, and it is GPLv2, I
+have taken over maintainership of this. I will actively maintain this
+as well as I can, so please send me patches/updates/fixes/requests, 
+and anything else, and I will do my best to accomodate. :)
+
+NEW HOMEPAGE:		http://jamesa.com/projects/ogg2mp3
+NEW GIT SRC REPO:	git://gitorious.org/ogg2mp3/ogg2mp3.git
+NEW MAINTAINER E-MAIL:	james.ausmus.code@gmail.com
+
+
+Thanks!
+
+-James

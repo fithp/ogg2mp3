@@ -1,10 +1,12 @@
 ogg2mp3
 
-Nathan Walp <faceprint@faceprint.com>        original mp32ogg code
-David Ljung Madison <davesource.com>         original ogg2mp3 code
-Mark Draheim <rickscafe.casablanca@gmx.net>  inverted mp32ogg -> new ogg2mp3
+Nathan Walp <faceprint@faceprint.com>		original mp32ogg code
+David Ljung Madison <davesource.com>		original ogg2mp3 code
+Mark Draheim <rickscafe.casablanca@gmx.net>	inverted mp32ogg -> new ogg2mp3
+James Ausmus <james.ausmus.code@gmail.com>	took over project maintainership, 2009-06
 
 patches/fixes
 
-Chris Dance <chris.dance@papercut.biz>       fixed ogginfo parsing
-Henry Gomersall <whg21@cam.ac.uk>            added cli options
+Chris Dance <chris.dance@papercut.biz>		fixed ogginfo parsing
+Henry Gomersall <whg21@cam.ac.uk>		added cli options
+Boris Peterson <transacid@centerim.org>		fixed lame endianness option

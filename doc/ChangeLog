@@ -1,5 +1,10 @@
 ogg2mp3
 
+0.5.1
+- First version done by James Ausmus
+- Added lame endianness patch by Boris Peterson
+- Misc header fixups to accoutn for new maintainership/homepage
+
 0.5
 
 - last version done by Mark Draheim
