@@ -1,0 +1,17 @@
+ogg2mp3
+
+NOW
+
+- strictify the bugger
+- need more checks:
+    o check write permission to output dir
+    o file and header integrety of the created mp3 must be checked
+
+LATER
+
+- add CL options to override inherited settings, so that one can
+  take a 160 kbps ogg and get a 128 kbps mp3 or downsample the mp3
+- get rid of ogginfo parsing:
+    o as soon as Ogg::Vorbis::Header::PurePerl becomes usable and
+      makes it into cooker
+

@@ -1,0 +1,36 @@
+ogg2mp3
+
+0.5
+
+- last version done by Mark Draheim
+- switch license to GPLv2
+- added cli options, thanks to Chris Gomersall
+
+0.4
+- fixed ogginfo parsing, thanks to Chris Dance
+- use true stereo for kbps >= 160
+
+0.3
+- fixed year vs date tag
+- re-enabled comment tag stating original ogg specs
+- adjusted quality levels according to lame's model
+- added sanity checks for kbps and freq
+- added quiet flags depending on verbose
+- added check for presence of executables
+- made genre lookup convert all underscores to spaces
+- tried to make genre tag bulletproof
+- added a few inline doc/TODO comments
+- various fixes/cleanups
+
+0.2
+- completely new script compared to 0.1
+- now based on mp32ogg by Nathan Walp
+- inverted mp32ogg
+  o added ogginfo parsing
+  o added fetching lame genre list
+  o added genre lookup against lame's list
+  o completely new system() line for actual conversion
+  o disabled integrity check of output file, no checker
+
+0.1
+- initial version based on ogg2mp3 by David Ljung Madison

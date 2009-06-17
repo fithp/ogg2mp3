@@ -1,0 +1,20 @@
+ogg2mp3
+
+This version is based on mp32ogg by Nathan Walp from where I took
+most of the code. A very small piece was inspired by the original
+ogg2mp3 by David Ljung Madison. I rudely usurped the name ogg2mp3
+because a) I can't think of any better and b) David seems to have
+stopped development of ogg2mp3. Nevertheless, I respect the work
+done by both authors and named them in the doc files and the
+script itself.
+
+Both authors released their work under an Artistic license. I've
+included a copy of the one from
+
+http://www.opensource.org/licenses/artistic-license.php
+
+As I will no longer mantain the script, I release it under the GPLv2,
+
+http://www.fsf.org/licensing/licenses/gpl.html
+
+If anyone wants to maintain the script, feel free to do so.

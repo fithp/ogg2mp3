@@ -1,0 +1,31 @@
+ogg2mp3
+
+Why another ogg2mp3?
+
+I looked for something that would turn my perfectly legal ogg files
+into mp3 files because my standalone DVD player cannot handle oggs.
+After some search I found ogg2mp3 at marginalhacks.com and used
+that for quite some time without major changes.
+
+Well, ogg2mp3 by David Ljung Madison worked but had some shortcomings.
+Searching for ideas I found Nathan Walp's mp32ogg which looked like
+a sound base to work on. Frankly, I don't understand why he didn't
+provide for both ways in a single script. So I took the liberty of
+taking his code and turn it upside down. If Nathan ever wants to
+incorporate my changes in a unified script, I will gladly stop working
+on this one.
+
+Until then, feel free to send me patches to this address
+
+Mark Draheim <rickscafe.casablanca@gmx.net>
+
+Do test the script. Right now I only tested it with well-behaved oggs.
+I'd be interested to know what happens with oggs that report weird
+bitrates or sampling frequencies or have broken tags.
+
+******** I will no longer maintain the script *****************
+**** Please don't send any further patches to me **************
+
+Have Fun
+
+- Mark
