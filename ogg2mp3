@@ -1,6 +1,9 @@
 #!/usr/bin/perl
 
 # ogg2mp3
+# Maintained by: James Ausmus <james.ausmus.code@gmail.com>
+# Homepage: http://gitorious.org/ogg2mp3/pages/Home
+# Released under the GPLv2 license
 #
 # based on (most of):
 #
@@ -22,15 +25,10 @@
 #
 # 0.4 ogginfo fix thanks to Chris Dance
 # 0.5 cli options thanks to Henry Gomersall 
+# 0.5.1 Addition of endian-fix patch by Boris Peterson, modification headers to reflect new maintainership/homepage
 #
-# ********** This is the last release done by me **************
-# If anyone likes to maintain ogg2mp3, feel free to do so.
-# All my code in ogg2mp3 is from now on released under the GPL,
-# see http://www.fsf.org/licensing/licenses/gpl.html
-# full text http://www.fsf.org/licensing/licenses/gpl.txt
-# *************** Have fun ************************************
 
-my $version = "v0.5";
+my $version = "v0.5.1";
 
 # TODO: use Ogg::Vorbis::Header::PurePerl when it becomes usable
 # TODO: strictify the thing
@@ -46,9 +44,8 @@ print " ------------------------------------------------------------------- \n";
 print "  ogg2mp3 $version\n";
 print "    based on mp32ogg (c) 2000-2002 Nathan Walp\n";
 print "    inverted and adapted by Mark Draheim\n";
-print "  This code is now released under the General Public License v2.\n";
-print "  I will no longer maintain the script and will not accept patches.\n";
-print "  Thanks to all who took an interest. Have fun!\n";
+print "    Maintainership assumed by James Ausmus\n";
+print "  This code is released under the General Public License v2.\n";
 print " ------------------------------------------------------------------- \n\n";
 
 my $MP3ENC  = "/usr/bin/lame";
