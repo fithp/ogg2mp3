@@ -26,9 +26,10 @@
 # 0.4 ogginfo fix thanks to Chris Dance
 # 0.5 cli options thanks to Henry Gomersall 
 # 0.5.1 Addition of endian-fix patch by Boris Peterson, modification headers to reflect new maintainership/homepage
+# 0.6 Strictification done
 #
 
-my $version = "v0.5.1";
+my $version = "v0.6";
 
 # TODO: use Ogg::Vorbis::Header::PurePerl when it becomes usable
 # TODO: strictify the thing
