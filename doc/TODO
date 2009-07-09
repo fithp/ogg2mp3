@@ -2,7 +2,6 @@ ogg2mp3
 
 NOW
 
-- strictify the bugger
 - need more checks:
     o check write permission to output dir
     o file and header integrety of the created mp3 must be checked

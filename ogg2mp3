@@ -32,7 +32,7 @@ my $version = "v0.5.1";
 
 # TODO: use Ogg::Vorbis::Header::PurePerl when it becomes usable
 # TODO: strictify the thing
-# use strict;
+use strict;
 use File::Find ();
 use File::stat;
 use File::Basename;
@@ -62,6 +62,14 @@ stat($OGG123) or die "Error: $OGG123 not present!\n";
 my $frequency_l = " 32 44.1 48 ";
 my $bitrate_l   = " 32 40 48 56 64 80 96 112 128 160 192 224 256 320 ";
 my $quality_l = " 0 1 2 3 4 5 6 7 8 9 ";
+
+my $opt_delete;
+my $opt_rename;
+my $opt_lowercase;
+my $opt_no_replace;
+my $opt_bitrate;
+my $opt_quality;
+my $opt_verbose;
 
 # build genre hash
 my %genres;
@@ -117,7 +125,7 @@ sub checkfile() {
 
 sub findfunc() {
 	my $file = $_;
-	($name,$dir,$ext) = fileparse($file,'\.ogg');
+	my ($name,$dir,$ext) = fileparse($file,'\.ogg');
 	if((/\.ogg/,$ext) && (-f $file)) {
 		&checkfile($file);
 	}
@@ -219,7 +227,7 @@ sub ConvertFile() {
 			print "Warning: Not enough ID3 info to rename!\n";
 			print "Warning: Reverting to old filename...\n";
 		}
-		($filename,$dirname,$ext) = fileparse($oggfile,'\.ogg');
+		my ($filename,$dirname,$ext) = fileparse($oggfile,'\.ogg');
 	}
 	else {
 		$filename =~ s/\%a/$oggtags{artist}/g;
@@ -232,13 +240,13 @@ sub ConvertFile() {
 			$filename =~ s/[\[\]\(\)\{\}!\@#\$\%^&\*\~ ]/_/g;
 			$filename =~ s/[\'\"]//g;
 		}
-		($name, $dir, $ext) = fileparse($filename, '.mp3');
+		my ($name, $dir, $ext) = fileparse($filename, '.mp3');
 		$filename = "$dir$name";
-		$dirname = dirname($oggfile);
+		my $dirname = dirname($oggfile);
 	}
 
-	$mp3outputfile = "$filename.mp3";
-	$newdir = dirname($mp3outputfile);
+	my $mp3outputfile = "$filename.mp3";
+	my $newdir = dirname($mp3outputfile);
 
 	# until i find a way to make perl's mkdir work like mkdir -p...
 	if (! -d $newdir) {
@@ -303,12 +311,12 @@ sub ConvertFile() {
 	$infostring .= " --tc " . shell_quote("ogg had $oggrates{'nominal bitrate'} kbps $oggrates{rate} Hz");
 		
 	
-	$mp3outputfile_escaped = shell_quote($mp3outputfile);
-	$oggfile_escaped = shell_quote($oggfile);
+	my $mp3outputfile_escaped = shell_quote($mp3outputfile);
+	my $oggfile_escaped = shell_quote($oggfile);
 	# this took me some time to figure
 	# note that byte order is swapped by lame via -x option
 	# TODO: somebody please tell me how to supress the "Assuming bla bla" output without devnull
-	$result = system("$OGG123 $decquiet -d raw -f - $oggfile_escaped | $MP3ENC $encquiet -r -q $quality -b $bitrate -s $frequency -m $channels $infostring - $mp3outputfile_escaped");
+	my $result = system("$OGG123 $decquiet -d raw -f - $oggfile_escaped | $MP3ENC $encquiet -r -q $quality -b $bitrate -s $frequency -m $channels $infostring - $mp3outputfile_escaped");
 
 	# TODO: find some widely used mp3 checker
 	# disabled the checking due to lack of checker

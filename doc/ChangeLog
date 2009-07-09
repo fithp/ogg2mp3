@@ -1,5 +1,8 @@
 ogg2mp3
 
+0.6
+- Strictification done - use strict uncommented, needed changes applied
+
 0.5.1
 - First version done by James Ausmus
 - Added lame endianness patch by Boris Peterson
