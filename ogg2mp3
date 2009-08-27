@@ -218,6 +218,8 @@ sub ConvertFile() {
 		# fallback default
 		$frequency = "44.1";	
 	}
+
+	my $dirname = dirname($oggfile);
 	
 	if($filename eq "" ||
 		((/\%a/) && $oggtags{artist} eq "") ||
@@ -228,7 +230,7 @@ sub ConvertFile() {
 			print "Warning: Not enough ID3 info to rename!\n";
 			print "Warning: Reverting to old filename...\n";
 		}
-		my ($filename,$dirname,$ext) = fileparse($oggfile,'\.ogg');
+		$filename = fileparse($oggfile,'\.ogg');
 	}
 	else {
 		$filename =~ s/\%a/$oggtags{artist}/g;
@@ -243,7 +245,6 @@ sub ConvertFile() {
 		}
 		my ($name, $dir, $ext) = fileparse($filename, '.mp3');
 		$filename = "$dir$name";
-		my $dirname = dirname($oggfile);
 	}
 
 	my $mp3outputfile = "$filename.mp3";
