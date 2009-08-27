@@ -74,7 +74,7 @@ my $opt_verbose;
 
 # build genre hash
 my %genres;
-open(GENRES, "$MP3ENC --genre-list|") or die "Couldn't get genre list with $MP3ENC --genre-list\n";
+open(GENRES, "$MP3ENC 2>&1 --genre-list|") or die "Couldn't get genre list with $MP3ENC --genre-list\n";
 while(<GENRES>) {
     chomp;
     next if /^\s*$/;
