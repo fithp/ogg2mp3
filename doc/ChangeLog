@@ -1,5 +1,11 @@
 ogg2mp3
 
+0.6.1
+- Fix several strictification-related bugs introduced in 0.6 - thanks Peter Greenwood!
+- Fix lame --genre-list outputting to stderr bug - thanks to Tobias Rehbein!
+- Add track number/total number of tracks to possible --rename options
+- Add --debug option to see some internal variable contents as they go by...
+
 0.6
 - Strictification done - use strict uncommented, needed changes applied
 
