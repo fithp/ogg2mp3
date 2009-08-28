@@ -71,6 +71,7 @@ my $opt_no_replace;
 my $opt_bitrate;
 my $opt_quality;
 my $opt_verbose;
+my $opt_debug;
 
 # build genre hash
 my %genres;
@@ -87,13 +88,14 @@ close(GENRES);
 # TODO; add overrides for lame settings, eg change sampling freq
 # right now we inherit ogg settings or fallback to common settings
 GetOptions("help|?",\&showhelp,
-		"delete", 
-		"rename=s", 
-		"lowercase",
-		"no-replace",
-		"bitrate=s",
-		"quality=s",
-		"verbose",
+		"delete", \$opt_delete,
+		"rename=s", \$opt_rename,
+		"lowercase", \$opt_lowercase,
+		"no-replace", \$opt_no_replace,
+		"bitrate=s", \$opt_bitrate,
+		"quality=s", \$opt_quality,
+		"verbose", \$opt_verbose,
+		"debug", \$opt_debug,
 		"<>", \&checkfile);
 
 sub showhelp() {
@@ -141,6 +143,10 @@ sub ConvertFile() {
 	my $lowercase = $opt_lowercase;
 	my $noreplace = $opt_no_replace;
 	my $verbose = $opt_verbose;
+
+	if ($opt_debug) {
+		print "Options:\n\toggfile: $oggfile\n\tdelete: $delete\n\tfilename: $filename\n\tbitrate: $bitrate\n\tquality: $quality\n\tlowercase: $lowercase\n\tnoreplace: $noreplace\n\tverbose: $verbose\n\n";
+	}
 
 	$_ = $filename;
 	
