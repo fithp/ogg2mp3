@@ -1,8 +1,8 @@
 #!/usr/bin/perl
 
 # ogg2mp3
-# Maintained by: James Ausmus <james.ausmus.code@gmail.com>
-# Homepage: http://gitorious.org/ogg2mp3/pages/Home
+# Maintained by: James Ausmus <james.ausmus@gmail.com>
+# Homepage: https://github.com/fithp/ogg2mp3
 # Released under the GPLv2 license
 #
 # based on (most of):
